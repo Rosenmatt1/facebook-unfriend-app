@@ -27,17 +27,16 @@
     <title>Facebook Unfriender App</title>
   </head>
   <body>
-    <script>
+    <!-- <script>
       window.fbAsyncInit = function() {
         FB.init({
-          appId      : '{223211789310003}',
+          appId      : '223211789310003',
           cookie     : true,
           xfbml      : true,
           version    : 'v10.0'
         });
           
         FB.AppEvents.logPageView();   
-          
       };
     
       (function(d, s, id){
@@ -47,7 +46,20 @@
          js.src = "https://connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
+    </script> -->
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '223211789310003',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v10.0'
+        });
+      };
     </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

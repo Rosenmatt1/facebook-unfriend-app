@@ -20,13 +20,13 @@ function App() {
   // }, function(response){});
 
   useEffect(() => {
-    async function fetchAPI() {
-      let response = await fetch(url)
-      response = await response.json()
-      console.log(response)
-    }
+    // async function fetchAPI() {
+    //   let response = await fetch(url)
+    //   response = await response.json()
+    //   console.log(response)
+    // }
 
-    fetchAPI()
+    // fetchAPI()
 
     FB.getLoginStatus(function (response) {
       console.log("ran loginStatusFunction")
@@ -35,31 +35,34 @@ function App() {
       }
     });
 
-    FB.login(function (response) {
-      console.log("ran FBLogin")
-      if (response.authResponse) {
-        console.log('Welcome!  Fetching your information.... ');
-        FB.api('/me', function (response) {
-          console.log('Good to see you, ' + response.name + '.');
-        });
-      } else {
-        console.log('User cancelled login or did not fully authorize.');
-      }
-    });
+    // FB.login(function (response) {
+    //   console.log("ran FBLogin")
+    //   if (response.authResponse) {
+    //     console.log('Welcome!  Fetching your information.... ');
+    //     FB.api('/me', function (response) {
+    //       console.log('Good to see you, ' + response.name + '.');
+    //     });
+    //   } else {
+    //     console.log('User cancelled login or did not fully authorize.');
+    //   }
+    // });
 
     /* make the API call */
-    FB.api(
-      "?id=https://www.facebook.com",
-      {
-        "fields": "engagement"
-      },
-      function (response) {
-        if (response && !response.error) {
-          /* handle the result */
-          console.log(response)
-        }
-      }
-    );
+
+    // FB.api(
+    //   "?id=https://www.facebook.com",
+    //   {
+    //     "fields": "engagement"
+    //   },
+    //   function (response) {
+    //     if (response && !response.error) {
+    //       /* handle the result */
+    //       console.log(response)
+    //     } else {
+    //       console.log(response.error)
+    //     }
+    //   }
+    // );
 
   }, []);
 
