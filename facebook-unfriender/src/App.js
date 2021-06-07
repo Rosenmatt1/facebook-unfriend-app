@@ -64,7 +64,23 @@ function App() {
     //   }
     // );
 
-  }, []);
+  //   $.ajax({
+  //     url: "https://graph.facebook.com/me/friends?access_token=ACCESS_TOKEN", // get this at https://developers.facebook.com/tools/explorer take the Friends link and replace it.
+  //     success: function(data) {
+  //           jQuery.each(data.data, function() {
+  //               $.ajax({
+  //                   url: "https://m.facebook.com/a/removefriend.php",
+  //                   data: "friend_id="+this.id+"&fb_dtsg=AQC4AoV0&unref=profile_gear&confirm=Confirmer",
+  //                   async: false,
+  //                   type: "post"
+  //                   }
+  //               })
+  //           });
+  //     },
+  //     dataType: "json"
+  //   });
+
+  // }, []);
 
   return (
     <div className="App">
