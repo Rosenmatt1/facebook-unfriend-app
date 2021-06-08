@@ -10,6 +10,8 @@ function App() {
   const clientToken = '9e816bf70b56267e494035c385c74fdc'
   const { FB_SECRET } = process.env
 
+  const mateoId = '10108834989297523'
+
   // let url = "https://graph.facebook.com/oauth/access_token?client_id={your-app-id}&client_secret={your-app-secret}&grant_type=client_credentials"
   let url = 'https://jsonplaceholder.typicode.com/todos/1'
 
@@ -81,6 +83,16 @@ function App() {
   //   });
 
   // }, []);
+
+  // api call to get all friends
+  // FB.api(
+  //   '/{user-id}/friends',
+  //   'GET',
+  //   {},
+  //   function(response) {
+  //       // Insert your code here
+  //   }
+  // );
 
   return (
     <div className="App">
